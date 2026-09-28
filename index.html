@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МЦКО — разборы задач</title>
+<style>
+:root{
+  --bg:#fff; --fg:#1f2328; --muted:#59636e; --bd:#d1d9e0;
+  --codebg:#f6f8fa; --accent:#0969da; --shadow:rgba(140,152,164,.2);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --bd:#30363d;
+    --codebg:#151b23; --accent:#4493f8; --shadow:rgba(0,0,0,.6);
+  }
+}
+html{color-scheme:light dark}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+header{
+  position:sticky; top:0; z-index:10; background:var(--bg);
+  border-bottom:1px solid var(--bd); padding:8px 14px;
+}
+#top{
+  font-weight:700; font-size:1.05rem; text-decoration:none;
+  color:var(--fg); display:inline-block; margin-bottom:2px;
+}
+nav{display:flex; flex-wrap:wrap; gap:2px 14px}
+nav a{color:var(--accent); text-decoration:none; white-space:nowrap}
+main{padding:10px 14px 60px; max-width:none}
+h2{
+  font-size:1.25rem; border-bottom:2px solid var(--bd);
+  padding-bottom:6px; margin:34px 0 14px;
+}
+.card{margin:0 0 34px}
+.card h3{margin:0 0 8px; font-size:1.05rem}
+.card img{
+  display:block; width:100%; height:auto; max-width:100%;
+  border:1px solid var(--bd); cursor:zoom-in; background:var(--codebg);
+}
+.codebox{border:1px solid var(--bd); border-radius:6px; margin-top:10px}
+.codebar{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:5px 10px; background:var(--codebg);
+  border-bottom:1px solid var(--bd);
+}
+.codebar span{color:var(--muted); font-size:.85rem}
+.copy{
+  font:inherit; font-size:.85rem; padding:3px 12px; cursor:pointer;
+  color:var(--accent); background:transparent;
+  border:1px solid var(--bd); border-radius:6px;
+}
+.copy:hover{border-color:var(--accent)}
+.copy.ok{color:#1a7f37; border-color:#1a7f37}
+@media (prefers-color-scheme:dark){.copy.ok{color:#3fb950; border-color:#3fb950}}
+pre{margin:0; padding:12px 14px; overflow:auto; max-height:70vh}
+code{
+  font:400 14px/1.5 ui-monospace,"Cascadia Mono",Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:clamp(13px,1vw + 9px,15px);
+}
+.soon{
+  margin-top:10px; padding:8px 14px; border:1px dashed var(--bd);
+  border-radius:6px; color:var(--muted);
+}
+#lb{
+  position:fixed; inset:0; z-index:100; display:grid;
+  place-items:center; background:rgba(0,0,0,.88); touch-action:none;
+}
+#lbimg{
+  max-width:98%; max-height:98%; will-change:transform;
+  transform-origin:center; cursor:grab; touch-action:none;
+  box-shadow:0 0 0 1px rgba(255,255,255,.15),0 8px 40px var(--shadow);
+  user-select:none; -webkit-user-drag:none;
+}
+@media (max-width:720px){
+  header,main{padding-left:8px; padding-right:8px}
+  pre{padding:10px}
+  h2{margin-top:26px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a id="top" href="#top">МЦКО — разборы задач</a>
+  <nav><a href="#m202511">МЦКО 2025-11</a> <a href="#m2425">МЦКО 2024-25 углублёнка</a> <a href="#m2324">МЦКО 2023-24 ИТ-класс</a> <a href="#k6">МЦКО k6</a> <a href="#sstepik">Степик — урок 969847</a> <a href="#cards">Шпаргалки</a></nav>
+</header>
+<main>
+<section id="m202511"><h2>МЦКО 2025-11</h2><article class="card"><h3>Задача task1</h3><img loading="lazy" src="mcko_2025_11/task1.png" alt="Условие — task1 (mcko_2025_11)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                f = (z == w) and (not x or y) or not w
+                if f == 0:
+                    print(w, x, z, y, f)
+
+# w, x, z, y</code></pre></div></article>
+<article class="card"><h3>Задача task2</h3><img loading="lazy" src="mcko_2025_11/task2.png" alt="Условие — task2 (mcko_2025_11)">
+<div class="soon">решение скоро</div></article></section>
+<section id="m2425"><h2>МЦКО 2024-25 углублёнка</h2><article class="card"><h3>Задача task1</h3><img loading="lazy" src="mcko_24-25_uglublenka/task1.png" alt="Условие — task1 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task10</h3><img loading="lazy" src="mcko_24-25_uglublenka/task10.png" alt="Условие — task10 (mcko_24-25_uglublenka)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>s = '3'*6 + '4'*75
+
+while '35' in s or '355' in s or '3444' in s:
+    if '35' in s:
+        s = s.replace('35', '4', 1) # третий аргумент говорит что меняем только 1 вхождение слева
+    if '355' in s:
+        s = s.replace('355', '4', 1)
+    if '3444' in s:
+        s = s.replace('3444', '3', 1)
+
+print(s)</code></pre></div></article>
+<article class="card"><h3>Задача task11</h3><img loading="lazy" src="mcko_24-25_uglublenka/task11.png" alt="Условие — task11 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task12</h3><img loading="lazy" src="mcko_24-25_uglublenka/task12.png" alt="Условие — task12 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task13</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>with open("13.txt", 'r') as file_in:
+  mas = [int(i.strip()) for i in file_in.readlines()] #убераем символы переноса строки
+  n = min(mas) #минимальное в файле число, т.к. можно посмотреть что это за число (8) можно 
+               # не проверять делится ли оно на 15,т.к. 8 точно не делится и значит подходит нам
+res = []
+for i in range(len(mas)):
+  if i &lt; len(mas) - 1: #чтобы не выйти за массив, т.к. берем i+1
+    if mas[i]%n==0 and mas[i+1]%n==0: #проверяем делимость на самое маленькое число в списке
+      res.append(mas[i]+mas[i+1])
+print(len(res), max(res))
+</code></pre></div></article>
+<article class="card"><h3>Задача task2</h3><img loading="lazy" src="mcko_24-25_uglublenka/task2.png" alt="Условие — task2 (mcko_24-25_uglublenka)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>n = 11   # не заворачиваю в цикл, подобрал руками
+b = bin(n)[2:] # перевод в двоичную обрезав первые 0b
+# все числовые форматы кроме десятичных - это строки
+if n % 2 == 0:
+    b = b + '10'
+else:
+    b = '1' + b + '00'
+res = int(b, base=2)  # перевод в десятичную из двоичной
+print(res)
+
+# oct - восьмиричная, hex - шестнадцатеричная
+# если основание системы счисления попадётся не 2, 8, 10 или 16
+# то лучше решать руками</code></pre></div></article>
+<article class="card"><h3>Задача task3</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code># 1011,01 bin + 24,6 oct
+
+b = int('101101', 2) # беру словно нет дробной части
+o = int('246', 8) #
+
+# у первого числа запятая отделяет 2 разряда в дробную часть
+# это означает, что целое число надо поделить 2 раза на 2
+# а второе число имеет 1 разряд после запятой, значит надо
+# поделить 1 раз на 8
+b = b / 2 / 2
+o = o / 8
+res = b + o
+print(res)
+print(hex(int(res)))
+</code></pre></div></article>
+<article class="card"><h3>Задача task4</h3><img loading="lazy" src="mcko_24-25_uglublenka/task4.png" alt="Условие — task4 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task5</h3><img loading="lazy" src="mcko_24-25_uglublenka/task5.png" alt="Условие — task5 (mcko_24-25_uglublenka)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                f = (z == w) and (not x or y) or not w
+                if f == 0:
+                    print(w, x, z, y, f)</code></pre></div></article>
+<article class="card"><h3>Задача task6</h3><img loading="lazy" src="mcko_24-25_uglublenka/task6.png" alt="Условие — task6 (mcko_24-25_uglublenka)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>alph = 'АВЕНС'
+
+count = 0
+for c1 in alph:
+    for c2 in alph:
+        for c3 in alph:
+            for c4 in alph:
+                count += 1
+                n = c1 + c2 + c3 + c4
+                if 'Е' not in n and 'АА' not in n:
+                    print(count, n)
+# первое и есть ответ (27)</code></pre></div></article>
+<article class="card"><h3>Задача task7</h3><img loading="lazy" src="mcko_24-25_uglublenka/task7.png" alt="Условие — task7 (mcko_24-25_uglublenka)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>import ipaddress
+
+network = ipaddress.ip_network('192.168.108.157/26', strict=False)
+
+for i, ip in enumerate(network):
+    print(i, ip)
+    # print(f"{ip:b}")
+
+# ответ 29, так как составители в этйо задаче подразумевали,
+# что брать первый (с нулями) и последний (с единицами) айпишник нельзя!
+# поэтому нумерация пошла с нуля, а подразумевалось что должна с единицы
+
+</code></pre></div></article>
+<article class="card"><h3>Задача task8</h3><img loading="lazy" src="mcko_24-25_uglublenka/task8.png" alt="Условие — task8 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task9</h3><img loading="lazy" src="mcko_24-25_uglublenka/task9.png" alt="Условие — task9 (mcko_24-25_uglublenka)">
+<div class="soon">решение скоро</div></article></section>
+<section id="m2324"><h2>МЦКО 2023-24 ИТ-класс</h2><article class="card"><h3>Задача task10</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>print((~18 | (132 &gt;&gt; 2)) &amp; (86 &lt;&lt; 1))
+</code></pre></div></article>
+<article class="card"><h3>Задача task11</h3><img loading="lazy" src="mcko_23-24_ITclass/task11.png" alt="Условие — task11 (mcko_23-24_ITclass)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>from functools import cache
+
+@cache
+def f(x, end):
+    if x == end:
+        return 1
+    if x &gt; end:
+        return 0
+    if x == 32:
+        return 0
+    return f(x+3, end) + f(x+4, end) + f(x*3, end)
+
+
+print(f(4, 16) * f(16, 46))
+</code></pre></div></article>
+<article class="card"><h3>Задача task13</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code># компегэ 19749
+
+f = open('../mcko_24-25_uglublenka/17_19749 (1).txt').readlines() # база
+d = [int(x) for x in f]                  # из строк в числа, базище
+
+# чисто посмотреть для себя
+min_el = min(d)
+max_el = max(d)
+print(min_el % 3, max_el % 7)
+
+# база - храни в списке, не храни в переменной
+res = []
+
+
+for a, b, c in zip(d, d[1:], d[2:]): # база, бери тройки соседей через зип, не бери через i
+    if [a%3, b%3, c%3].count(2) == 1 and [a%7, b%7, c%7].count(3) &gt;= 2: # хитрый посчёт
+        res.append(a+b+c)
+
+print(len(res), max(res)) # количество сумм вывожу и максимальную из сумм
+# вы прекрасны (даже Самбуров)
+</code></pre></div></article>
+<article class="card"><h3>Задача task2</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>for n in range(1, 300):
+
+    b = bin(n)[2:]
+    if n % 2 == 0:
+        b = b + '11'
+    else:
+        b = '1' + b + '10'
+    res = int(b, 2)
+    if res &gt; 505:
+        print(n, res)</code></pre></div></article></section>
+<section id="k6"><h2>МЦКО k6</h2><article class="card"><h3>Задача task1</h3><img loading="lazy" src="moko_k6/task1.png" alt="Условие — task1 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task11</h3><img loading="lazy" src="moko_k6/task11.png" alt="Условие — task11 (moko_k6)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>from string import digits, ascii_uppercase
+
+alph = digits + ascii_uppercase
+print(alph)
+# 154x3 + 1x365
+for x in range(12):
+    a = 1 * 12**4 + 5 * 12**3 + 4 * 12**2 + x * 12**1 + 3 * 12**0
+    b = 1 * 12**4 + x * 12**3 + 3 * 12**2 + 6 * 12**1 + 5 * 12**0
+    s = a + b
+    print(x, s / 13)
+
+# 4340
+
+# for x in alph[:12]:
+for x in '0123456789AB':
+    a = int(f'154{x}3', 12)
+    b = int(f'1{x}365', 12)
+    s = a + b
+    print(x, s / 13)
+
+# 4340
+</code></pre></div></article>
+<article class="card"><h3>Задача task12</h3><img loading="lazy" src="moko_k6/task12.png" alt="Условие — task12 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task2</h3><img loading="lazy" src="moko_k6/task2.png" alt="Условие — task2 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task3</h3><img loading="lazy" src="moko_k6/task3.png" alt="Условие — task3 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task4</h3><img loading="lazy" src="moko_k6/task4.png" alt="Условие — task4 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task5</h3><img loading="lazy" src="moko_k6/task5.png" alt="Условие — task5 (moko_k6)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                f = (z == w) and (not x or y) or not w
+                if f == 0:
+                    print(w, x, z, y, f)
+
+# wxzy
+</code></pre></div></article>
+<article class="card"><h3>Задача task6</h3><img loading="lazy" src="moko_k6/task6.png" alt="Условие — task6 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task7</h3><img loading="lazy" src="moko_k6/task7.png" alt="Условие — task7 (moko_k6)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача task8</h3><img loading="lazy" src="moko_k6/task8.png" alt="Условие — task8 (moko_k6)">
+<div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>p = 5
+q = 7
+e = 11
+f = (p - 1) * (q - 1)
+
+for d in range(1, 40):
+    g = ((d * e) % f == 1)
+    print(d, g)
+
+# 35</code></pre></div></article>
+<article class="card"><h3>Задача task9</h3><img loading="lazy" src="moko_k6/task9.png" alt="Условие — task9 (moko_k6)">
+<div class="soon">решение скоро</div></article></section>
+<section id="sstepik"><h2>Степик — урок 969847</h2><article class="card"><h3>Задача 2</h3><img loading="lazy" src="sstepik.org_lesson_969847/2.png" alt="Условие — Задача 2 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача 3</h3><img loading="lazy" src="sstepik.org_lesson_969847/3.png" alt="Условие — Задача 3 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача 4</h3><img loading="lazy" src="sstepik.org_lesson_969847/4.png" alt="Условие — Задача 4 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача 5</h3><div class="codebox"><div class="codebar"><span>Python</span><button type="button" class="copy">Копировать</button></div><pre><code>from ctypes import c_float
+
+n = c_float(-27.125)
+print(n)
+b = bytes(n)
+print(b)
+# b'\x00\x00\xd9\xc1' в обратном порядке по паре
+# в ответ C1D90000
+</code></pre></div></article>
+<article class="card"><h3>Задача 6</h3><img loading="lazy" src="sstepik.org_lesson_969847/6.png" alt="Условие — Задача 6 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача 7</h3><img loading="lazy" src="sstepik.org_lesson_969847/7.png" alt="Условие — Задача 7 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача 8</h3><img loading="lazy" src="sstepik.org_lesson_969847/8.png" alt="Условие — Задача 8 (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article>
+<article class="card"><h3>Задача Планеты высокое разрешение</h3><img loading="lazy" src="sstepik.org_lesson_969847/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D1%8B%20%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B5%20%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5.png" alt="Условие — Планеты высокое разрешение (sstepik.org_lesson_969847)">
+<div class="soon">решение скоро</div></article></section>
+<section id="cards"><h2>Шпаргалки</h2><article class="card"><h3>Задача Huffman</h3><img loading="lazy" src="NADO%20ZNAT/Huffman.png" alt="Условие — Huffman (NADO ZNAT)">
+</article>
+<article class="card"><h3>Задача INT</h3><img loading="lazy" src="NADO%20ZNAT/INT.png" alt="Условие — INT (NADO ZNAT)">
+</article></section>
+</main>
+<div id="lb" hidden><img id="lbimg" alt=""></div>
+<script>
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+let s=1,tx=0,ty=0,ptr=new Map(),drag=null,pinchD=0,pinchS=1;
+function apply(){lbimg.style.transform='translate('+tx+'px,'+ty+'px) scale('+s+')';}
+function open(src,alt){lbimg.src=src;lbimg.alt=alt;s=1;tx=0;ty=0;apply();
+  lb.hidden=false;document.body.style.overflow='hidden';}
+function close(){lb.hidden=true;lbimg.src='';document.body.style.overflow='';}
+document.querySelectorAll('.card img').forEach(im=>{
+  im.setAttribute('tabindex','0');
+  im.addEventListener('click',()=>open(im.src,im.alt));
+  im.addEventListener('keydown',e=>{if(e.key==='Enter')open(im.src,im.alt);});
+});
+lb.addEventListener('click',e=>{if(e.target===lb)close();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden)close();});
+lbimg.addEventListener('wheel',e=>{
+  e.preventDefault();
+  const f=e.deltaY<0?1.15:1/1.15,ns=Math.min(12,Math.max(1,s*f));
+  if(ns===s)return;
+  const r=lbimg.getBoundingClientRect(),cx=e.clientX-r.left-r.width/2,
+        cy=e.clientY-r.top-r.height/2;
+  tx=cx-(cx-tx)*(ns/s); ty=cy-(cy-ty)*(ns/s); s=ns; apply();
+},{passive:false});
+lbimg.addEventListener('pointerdown',e=>{
+  lbimg.setPointerCapture(e.pointerId);
+  ptr.set(e.pointerId,e);
+  if(ptr.size===1)drag={x:e.clientX,y:e.clientY,tx,ty};
+  else if(ptr.size===2){const a=[...ptr.values()];
+    pinchD=Math.hypot(a[0].clientX-a[1].clientX,a[0].clientY-a[1].clientY);pinchS=s;}
+});
+lbimg.addEventListener('pointermove',e=>{
+  if(!ptr.has(e.pointerId))return;
+  ptr.set(e.pointerId,e);
+  if(ptr.size===2){
+    const a=[...ptr.values()],
+          d=Math.hypot(a[0].clientX-a[1].clientX,a[0].clientY-a[1].clientY);
+    s=Math.min(12,Math.max(1,pinchS*d/pinchD)); apply();
+  }else if(drag){
+    tx=drag.tx+e.clientX-drag.x; ty=drag.ty+e.clientY-drag.y; apply();
+  }
+});
+function up(e){
+  ptr.delete(e.pointerId);
+  if(ptr.size===1){const p=[...ptr.values()][0];drag={x:p.clientX,y:p.clientY,tx,ty};}
+  else if(ptr.size===0)drag=null;
+}
+lbimg.addEventListener('pointerup',up);
+lbimg.addEventListener('pointercancel',up);
+lbimg.addEventListener('dblclick',e=>{e.preventDefault();
+  if(s>1){s=1;tx=0;ty=0;}else{s=2.5;} apply();});
+
+function clipboardCopy(text){
+  if(navigator.clipboard&&window.isSecureContext)
+    return navigator.clipboard.writeText(text);
+  return new Promise((res,rej)=>{
+    const ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{document.execCommand('copy')?res():rej();}
+    catch(err){rej(err);} finally{ta.remove();}
+  });
+}
+document.querySelectorAll('.copy').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const code=b.closest('.codebox').querySelector('code').textContent;
+    clipboardCopy(code).then(()=>{
+      b.textContent='Скопировано'; b.classList.add('ok');
+      setTimeout(()=>{b.textContent='Копировать';b.classList.remove('ok');},1500);
+    }).catch(()=>{b.textContent='Не вышло';setTimeout(()=>b.textContent='Копировать',1500);});
+  });
+});
+</script>
+</body>
+</html>
