@@ -7,12 +7,3 @@ for x in range(2):
                     print(w, x, z, y, f)
 
 # wxzy
-
-
-for x in range(-100, 300):
-    a = x
-    b = x + 1
-    b = b - 1
-    print(a, b, a == b, a is b)
-
-print(bool(-5))
