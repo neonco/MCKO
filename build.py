@@ -18,7 +18,7 @@ GRADES = [
         ("10 класс/sstepik.org_lesson_969847", "Степик", "sstepik", False),
     ]),
     ("Шпаргалки", "cards", "neutral", [
-        ("NADO ZNAT", "Шпаргалки", "cheats", True),
+        ("NADO ZNAT", "Надо знать", "cheats", False),
     ]),
 ]
 
@@ -70,7 +70,7 @@ def collect(folder):
     return stems, imgs, pys
 
 
-def card_html(folder_path, stem, imgs, pys, section_title):
+def card_html(folder_path, stem, imgs, pys, section_title, soon):
     label = task_label(stem)
     parts = []
     for img in imgs.get(stem, []):
@@ -88,7 +88,7 @@ def card_html(folder_path, stem, imgs, pys, section_title):
             '<button type="button" class="copy">Копировать</button></div>'
             f"<pre><code>{esc_code(code)}</code></pre></div>"
         )
-    elif section_title != "Шпаргалки":
+    elif soon:
         parts.append('<div class="soon">Решение скоро</div>')
     return (
         f'<article class="card"><h4>{esc(label)}</h4>' + "\n".join(parts) + "</article>"
@@ -109,7 +109,8 @@ def build():
             folder = root / path
             stems, imgs, pys = collect(folder)
             cards = [
-                card_html(path, stem, imgs, pys, stitle) for stem in stems
+                card_html(path, stem, imgs, pys, stitle, path != "NADO ZNAT")
+                for stem in stems
             ]
             badge = ' <span class="badge">актуальное</span>' if current else ""
             secs.append(
