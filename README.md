@@ -34,5 +34,8 @@ Pages сам пересоберёт сайт из ветки `main`.
 
 - `build.py` — собирает `index.html` из папок с задачами (пары `taskN.png` ↔ `taskN.py`)
 - `index.html` — сгенерированная страница, руками не править
-- разделы: `mcko_2025_11`, `mcko_24-25_uglublenka`, `mcko_23-24_ITclass`, `moko_k6`,
-  `sstepik.org_lesson_969847`, `NADO ZNAT` (шпаргалки)
+- `10 класс/` — `mcko_2025_11`, `mcko_24-25_uglublenka`, `mcko_23-24_ITclass`, `moko_k6`,
+  `sstepik.org_lesson_969847`
+- `7 класс/` — `moko_k6`
+- `NADO ZNAT/` — шпаргалки
+- новый раздел добавляется строкой в `SECTIONS` в `build.py`
