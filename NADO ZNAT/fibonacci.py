@@ -1,3 +1,5 @@
+from time import time
+
 step = 100_000_001
 
 # динамическое проганье (цикл + память)
@@ -26,3 +28,9 @@ def f(n):
         return f(n-1) + f(n-2)
 
 print(f(10))
+
+for n in range(1, 50):
+    start = time()
+    res = f(n)
+    end = time()
+    print(n, res, end - start)
