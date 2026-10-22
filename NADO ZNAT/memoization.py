@@ -27,3 +27,19 @@ for n in range(1, 500):
     print(n, res, end - start)
 
 print(f.cache_info())
+
+
+@cache
+def ff(n):
+    if n <= 1:
+        return 1
+    return ff(n-1) * (n+1)
+
+
+for n in range(1, 11_000):
+    ff(n)
+
+res = (ff(11_000) + 5*ff(10_999)) / ff(10_998)
+print(res)
+print(ff.cache_info())
+# 121066000
