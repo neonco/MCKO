@@ -11,9 +11,6 @@ print(min(m))
 
 n = 8
 
-# for i in range(len(m)-1):
-#     print(m[i], m[i+1])
-
 res = []
 for a, b in zip(m, m[1:]):
     if a % n == 0 and b % n == 0:
